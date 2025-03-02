@@ -61,6 +61,11 @@ a.logo > span {
   color: #2e2f42;
 }
 
+.top-bar {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 nav.navigation {
   color: #2e2f42;
   font-weight: 500;
@@ -76,6 +81,19 @@ nav ul.top-bar-icons {
 nav a.nav-icons {
   color: #2e2f42;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a.nav-icons::after{
+  position: relative;
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  color: #404bbf;
+  border-radius: 2px;
 }
 
 nav a.nav-icons:focus {
@@ -98,6 +116,7 @@ address ul.address-icons {
 .address-info {
   color: #434455;
   font-weight: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-info:hover {
@@ -117,6 +136,7 @@ address ul.address-icons {
     url(../images/effective.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   color: #ffffff;
   padding: 188px 0;
   text-align: center;
@@ -148,6 +168,7 @@ button.order-service {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 section.top-block > button.order-service:hover {
@@ -247,6 +268,8 @@ section img.members {
 
 section div.members-box {
   padding: 32px 0;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 section.team h3.team-member {
